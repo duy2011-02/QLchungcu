@@ -1,0 +1,164 @@
+/* ================= ROOT ================= */
+.root {
+    -fx-background-color: #f6faff;
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-smoothing-type: lcd; /* chữ rõ nét */
+}
+
+/* ================= SIDEBAR ================= */
+#sidebarPane {
+    -fx-background-color: #f6faff;  /* đồng bộ với tổng thể */
+    -fx-padding: 10px;
+    -fx-pref-width: 150px; /* sidebar thu nhỏ */
+    -fx-border-color: #CCCCCC; /* đường ngăn cách bên phải */
+    -fx-border-width: 0 1 0 0;  /* chỉ vẽ đường viền bên phải */
+}
+
+/* ================= SIDEBAR BUTTONS ================= */
+/* MenuButton chính */
+.dbButton {
+    -fx-background-color: #f6faff;
+    -fx-border-color: #B0C4DE;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-font-smoothing-type: lcd;
+    -fx-cursor: hand;
+    -fx-pref-width: 150px; /* đồng bộ với sidebar */
+    -fx-pref-height: 60px;
+    -fx-alignment: center;
+}
+
+/* Hover */
+.dbButton:hover {
+    -fx-background-color: #ADD8E6;
+}
+
+/* Nhấn */
+.dbButton:armed {
+    -fx-background-color: #87CEFA;
+}
+
+/* Icon + Text căn chỉnh */
+.dbButton .graphic {
+    -fx-padding: 0 0 0 0;
+}
+
+/* ================= MENUITEMS ================= */
+/* MenuItem trong MenuButton (bỏ bo viền, hover màu xanh nhạt, dài bằng nút) */
+.dbItemFlat {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-text-fill: black;
+    -fx-font-family: "Segoe UI";
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-font-smoothing-type: lcd;
+    -fx-padding: 5 10;
+    -fx-cursor: hand;
+
+    /* Cố định width bằng MenuButton */
+    -fx-pref-width: 150px;
+    -fx-min-width: 150px;
+    -fx-max-width: 150px;
+}
+
+.dbItemFlat:hover {
+    -fx-background-color: #ADD8E6;
+}
+
+/* ================= CHOICES / SELECTIONS ================= */
+.dbChoices {
+    -fx-padding: 0 0 0 5;
+}
+
+.dbChoice {
+    -fx-background-color: #f6faff;
+    -fx-border-color: transparent;
+    -fx-font-family: "Segoe UI";
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-font-smoothing-type: lcd;
+    -fx-text-fill: black;
+    -fx-cursor: hand;
+}
+
+.dbChoice:hover {
+    -fx-background-color: #ADD8E6;
+}
+
+/* ================= STATISTIC BOX ================= */
+.statBoxModern {
+    -fx-background-color: white;
+    -fx-border-color: #B0C4DE;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5,0,0,2);
+}
+
+.statLabelModern {
+    -fx-font-family: "Segoe UI";
+    -fx-font-weight: bold;
+    -fx-font-size: 14pt;
+    -fx-font-smoothing-type: lcd;
+    -fx-text-fill: #1B3A57;
+}
+
+.statNumberModern {
+    -fx-font-family: "Segoe UI";
+    -fx-font-weight: bold;
+    -fx-font-size: 20pt;
+    -fx-font-smoothing-type: lcd;
+    -fx-text-fill: #1B3A57;
+}
+
+/* ================= TOP HEADER ================= */
+#borderPane > .top {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #E6E6E6;
+    -fx-border-width: 0 0 1 0;
+}
+
+.logoLabel {
+    -fx-font-family: "Segoe UI";
+    -fx-font-weight: bold;
+    -fx-font-size: 18pt;
+    -fx-font-smoothing-type: lcd;
+    -fx-text-fill: #1B3A57;
+}
+
+/* ================= SETTING MENU ================= */
+.settingButtonModern {
+    -fx-background-color: transparent;
+    -fx-font-family: "Segoe UI";
+    -fx-font-weight: bold;
+    -fx-font-size: 14pt;
+    -fx-font-smoothing-type: lcd;
+    -fx-cursor: hand;
+}
+
+.settingButtonModern:hover {
+    -fx-background-color: #ADD8E6;
+}
+
+/* MenuItem trong setting */
+.settingItemModern {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-font-family: "Segoe UI";
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-font-smoothing-type: lcd;
+    -fx-text-fill: #1B3A57;
+    -fx-padding: 5 15;
+    -fx-cursor: hand;
+}
+
+.settingItemModern:hover {
+    -fx-background-color: #ADD8E6;
+}

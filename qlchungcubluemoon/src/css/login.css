@@ -1,0 +1,92 @@
+/* ================= ROOT ================= */
+.root {
+    -fx-background-color: #f6faff;
+    -fx-font-family: "Arial";
+    -fx-text-fill: black;
+}
+
+/* ================= LOGIN CONTAINER ================= */
+.login-container {
+    -fx-background-color: white;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-padding: 40px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 10, 0.0, 0, 4);
+}
+
+/* ================= TEXTFIELDS ================= */
+.text-field, #txtUserName, #txtShowPassword, #txtHidePassword {
+    -fx-background-color: #f0f4ff;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-padding: 10 40 10 20; /* thêm padding để eye icon không che text */
+    -fx-font-size: 14pt;
+    -fx-text-fill: black;
+}
+
+/* ================= PASSWORD FIELD ================= */
+#txtHidePassword {
+    -fx-background-color: #f0f4ff;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-padding: 10 40 10 20;
+    -fx-font-size: 14pt;
+    -fx-text-fill: black;
+}
+
+#txtShowPassword {
+    -fx-background-color: #f0f4ff;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-padding: 10 40 10 20;
+    -fx-font-size: 14pt;
+    -fx-text-fill: black;
+}
+
+/* ================= LOGIN BUTTON ================= */
+#loginButton {
+    -fx-background-color: #1874cd;
+    -fx-background-radius: 30px;
+    -fx-text-fill: black;
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+#loginButton:hover {
+    -fx-background-color: #1c86ee;
+}
+
+#loginButton:pressed {
+    -fx-background-color: #104e8b;
+}
+
+/* ================= EYE ICON ================= */
+.eye-icon {
+    -fx-cursor: hand;
+    -fx-opacity: 0.8;
+}
+
+.eye-icon:hover {
+    -fx-opacity: 1;
+}
+
+/* ================= LABEL ================= */
+.label {
+    -fx-text-fill: black;
+    -fx-font-size: 14pt;
+}
+
+/* ================= ERROR MESSAGE ================= */
+.error-label {
+    -fx-text-fill: red;
+    -fx-font-size: 12pt;
+    -fx-font-weight: bold;
+}

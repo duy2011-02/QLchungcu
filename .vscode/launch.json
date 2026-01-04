@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "MainView",
+      "request": "launch",
+      "mainClass": "View2.MainView",
+      "projectName": "QuanLyThuPhi_9219a3fb"
+    },
+    {
+      "type": "java",
+      "name": "TestDB",
+      "request": "launch",
+      "mainClass": "View.TestDB",
+      "projectName": "QuanLyThuPhi_b558dad1"
+    },
+    {
+      "type": "java",
+      "name": "Run JavaFX",
+      "request": "launch",
+      "mainClass": "View.MainView",
+      "vmArgs": "--module-path C:/javafx/javafx-sdk-25.0.1/lib --add-modules javafx.controls,javafx.fxml --enable-native-access=javafx.graphics"
+    }
+  ]
+}

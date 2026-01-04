@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="1250.0" stylesheets="@../css/page.css"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.NhanKhauController">
+
+    <children>
+
+        <!-- Main Background -->
+        <AnchorPane layoutX="6.0" layoutY="5.0" prefHeight="670.0" prefWidth="1238.0" styleClass="background">
+            <children>
+
+                <!-- Search Bar -->
+                <Label layoutX="50.0" layoutY="10.0" text="Tìm kiếm:">
+                    <font><Font name="Segoe UI" size="16"/></font>
+                </Label>
+                <TextField fx:id="searchbar" layoutX="160.0" layoutY="8.0" prefHeight="28.0" prefWidth="620.0"
+                           promptText="Search..." />
+                <ImageView fitHeight="23.0" fitWidth="28.0" layoutX="790.0" layoutY="8.0"
+                           pickOnBounds="true" preserveRatio="true">
+                    <image><Image url="@../image/search_icon.png"/></image>
+                </ImageView>
+
+                <!-- TableView Nhân Khẩu -->
+                <TableView fx:id="residentTableView" layoutX="50.0" layoutY="45.0" prefHeight="220.0" prefWidth="1138.0"
+                           styleClass="table">
+                    <columns>
+                        <TableColumn fx:id="maHKCol" prefWidth="95.0" text="Mã HK"/>
+                        <TableColumn fx:id="hoTenCol" prefWidth="105.0" text="Họ Tên"/>
+                        <TableColumn fx:id="tuoiCol" prefWidth="60.0" text="Tuổi"/>
+                        <TableColumn fx:id="gioiTinhCol" prefWidth="95.0" text="Giới tính"/>
+                        <TableColumn fx:id="soCCCDCol" prefWidth="150.0" text="CMND/CCCD"/>
+                        <TableColumn fx:id="soDTCol" prefWidth="85.0" text="SĐT"/>
+                        <TableColumn fx:id="quanHeCol" prefWidth="190.0" text="Quan hệ với chủ hộ"/>
+                        <TableColumn fx:id="tamVangCol" prefWidth="165.0" text="Khai báo tạm vắng"/>
+                        <TableColumn fx:id="tamTruCol" prefWidth="188.0" text="Khai báo tạm trú"/>
+                    </columns>
+                </TableView>
+
+                <!-- Form Khai báo tạm trú -->
+                <AnchorPane layoutX="50.0" layoutY="280.0" prefHeight="160.0" prefWidth="450.0" styleClass="form">
+                    <children>
+                        <TextField fx:id="soCCCDTamTruText" layoutX="15.0" layoutY="10.0" prefHeight="28.0" prefWidth="170.0" promptText="Số CMND/CCCD"/>
+                        <TextField fx:id="soGiayTamTruText" layoutX="15.0" layoutY="50.0" prefHeight="28.0" prefWidth="170.0" promptText="Số giấy tạm trú"/>
+                        <TextField fx:id="lyDoTamTruText" layoutX="15.0" layoutY="90.0" prefHeight="28.0" prefWidth="170.0" promptText="Lý do"/>
+                        <DatePicker fx:id="tuNgayTamTruText" layoutX="195.0" layoutY="10.0" prefHeight="28.0" prefWidth="170.0" promptText="Từ ngày"/>
+                        <DatePicker fx:id="denNgayTamTruText" layoutX="195.0" layoutY="50.0" prefHeight="28.0" prefWidth="170.0" promptText="Đến ngày"/>
+                        <Button layoutX="195.0" layoutY="90.0" prefHeight="28.0" prefWidth="170.0" text="Khai báo tạm trú" onAction="#khaiBaoTamTruOnAction"
+                                style="-fx-background-color: #5DADE2; -fx-background-radius: 5px;">
+                            <cursor><Cursor fx:constant="HAND"/></cursor>
+                        </Button>
+                    </children>
+                </AnchorPane>
+
+                <!-- Form Khai báo tạm vắng -->
+                <AnchorPane layoutX="520.0" layoutY="280.0" prefHeight="160.0" prefWidth="450.0" styleClass="form">
+                    <children>
+                        <TextField fx:id="soCCCDTamVangText" layoutX="15.0" layoutY="10.0" prefHeight="28.0" prefWidth="170.0" promptText="Số CMND/CCCD"/>
+                        <TextField fx:id="soGiayTamVangText" layoutX="15.0" layoutY="50.0" prefHeight="28.0" prefWidth="170.0" promptText="Số giấy tạm vắng"/>
+                        <TextField fx:id="noiTamTruText" layoutX="15.0" layoutY="90.0" prefHeight="28.0" prefWidth="170.0" promptText="Nơi tạm trú"/>
+                        <DatePicker fx:id="tuNgayTamVangText" layoutX="195.0" layoutY="10.0" prefHeight="28.0" prefWidth="170.0" promptText="Từ ngày"/>
+                        <DatePicker fx:id="denNgayTamVangText" layoutX="195.0" layoutY="50.0" prefHeight="28.0" prefWidth="170.0" promptText="Đến ngày"/>
+                        <Button layoutX="195.0" layoutY="90.0" prefHeight="28.0" prefWidth="170.0" text="Khai báo tạm vắng" onAction="#khaiBaoTamVangOnAction"
+                                style="-fx-background-color: #5DADE2; -fx-background-radius: 5px;">
+                            <cursor><Cursor fx:constant="HAND"/></cursor>
+                        </Button>
+                    </children>
+                </AnchorPane>
+
+                <!-- Action Buttons (Xóa / Xem DS) -->
+                <Button layoutX="1000.0" layoutY="280.0" prefHeight="35.0" prefWidth="200.0" text="Xóa nhân khẩu" onAction="#deleteNhanKhauOnAction"/>
+                <Button layoutX="1000.0" layoutY="330.0" prefHeight="35.0" prefWidth="200.0" text="Xem DSKB tạm trú" onAction="#xemTamTruOnAction"/>
+                <Button layoutX="1000.0" layoutY="380.0" prefHeight="35.0" prefWidth="200.0" text="Xem DSKB tạm vắng" onAction="#xemTamVangOnAction"/>
+
+                <!-- Form Thêm Nhân Khẩu -->
+                <AnchorPane layoutX="50.0" layoutY="450.0" prefHeight="80.0" prefWidth="1150.0" styleClass="form">
+                    <children>
+                        <TextField fx:id="addHoTenText" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="140.0" promptText="Họ và tên"/>
+                        <TextField fx:id="addTuoiText" layoutX="10.0" layoutY="50.0" prefHeight="28.0" prefWidth="140.0" promptText="Tuổi"/>
+                        <TextField fx:id="addGioiTinhText" layoutX="160.0" layoutY="10.0" prefHeight="28.0" prefWidth="140.0" promptText="Giới tính"/>
+                        <TextField fx:id="addSoCCCDText" layoutX="160.0" layoutY="50.0" prefHeight="28.0" prefWidth="140.0" promptText="Số CMND/CCCD"/>
+                        <TextField fx:id="addSoDTText" layoutX="310.0" layoutY="50.0" prefHeight="28.0" prefWidth="140.0" promptText="Số điện thoại"/>
+                        <CheckBox fx:id="isChuHoCBox" layoutX="310.0" layoutY="10.0" text="Là chủ hộ"/>
+                        <TextField fx:id="addQuanHeText" layoutX="460.0" layoutY="10.0" prefHeight="28.0" prefWidth="140.0" promptText="Quan hệ với chủ hộ"/>
+                        <ComboBox fx:id="addMaHoKhauCBox" layoutX="460.0" layoutY="50.0" prefHeight="28.0" prefWidth="140.0" promptText="Mã hộ khẩu"/>
+                        <Button layoutX="620.0" layoutY="30.0" prefHeight="28.0" prefWidth="180.0" text="Thêm nhân khẩu" onAction="#addNhanKhauOnAction"/>
+                    </children>
+                </AnchorPane>
+
+                <!-- Form Cập Nhật Nhân Khẩu (dưới Thêm) -->
+                <AnchorPane layoutX="50.0" layoutY="540.0" prefHeight="80.0" prefWidth="1150.0" styleClass="form">
+                    <children>
+                        <TextField fx:id="updateHoTenText" layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="140.0" promptText="Họ và tên"/>
+                        <TextField fx:id="updateTuoiText" layoutX="10.0" layoutY="50.0" prefHeight="28.0" prefWidth="140.0" promptText="Tuổi"/>
+                        <TextField fx:id="updateGioiTinhText" layoutX="160.0" layoutY="10.0" prefHeight="28.0" prefWidth="140.0" promptText="Giới tính"/>
+                        <TextField fx:id="updateSoCCCDText" layoutX="160.0" layoutY="50.0" prefHeight="28.0" prefWidth="140.0" promptText="Số CMND/CCCD"/>
+                        <TextField fx:id="updateSoDTText" layoutX="310.0" layoutY="50.0" prefHeight="28.0" prefWidth="140.0" promptText="Số điện thoại"/>
+                        <CheckBox fx:id="isChuHoCBox1" layoutX="310.0" layoutY="10.0" text="Là chủ hộ"/>
+                        <TextField fx:id="updateQuanHeText" layoutX="460.0" layoutY="10.0" prefHeight="28.0" prefWidth="140.0" promptText="Quan hệ với chủ hộ"/>
+                        <ComboBox fx:id="updateMaHoKhauCBox" layoutX="460.0" layoutY="50.0" prefHeight="28.0" prefWidth="140.0" promptText="Mã hộ khẩu"/>
+                        <Button layoutX="620.0" layoutY="30.0" prefHeight="28.0" prefWidth="180.0" text="Cập nhật nhân khẩu" onAction="#updateNhanKhauOnAction"/>
+                    </children>
+                </AnchorPane>
+
+            </children>
+        </AnchorPane>
+
+    </children>
+</AnchorPane>

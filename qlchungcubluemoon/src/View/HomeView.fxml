@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" prefHeight="745.0" prefWidth="1430.0"
+            stylesheets="@../css/home.css"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.HomeController">
+
+    <!-- ================= Sidebar ================= -->
+    <left>
+        <AnchorPane fx:id="sidebarPane" prefWidth="140.0" style="-fx-background-color:#f6faff;">
+            <children>
+                <VBox spacing="20" layoutY="60.0" layoutX="10.0">
+
+                    <!-- Nút Dân cư -->
+                    <MenuButton fx:id="homeOwnerButton" text="Dân cư" prefWidth="150" prefHeight="60" styleClass="dbButtonModern">
+                        <graphic>
+                            <ImageView fitHeight="40" fitWidth="40">
+                                <image>
+                                    <Image url="@../image/ResidentIcon.png"/>
+                                </image>
+                            </ImageView>
+                        </graphic>
+                        <items>
+                            <MenuItem fx:id="residentButton" text="Nhân khẩu" styleClass="dbItemFlat" onAction="#HandleClick"/>
+                            <MenuItem fx:id="householdButton" text="Hộ khẩu" styleClass="dbItemFlat" onAction="#HandleClick"/>
+                        </items>
+                    </MenuButton>
+
+                    <!-- Nút Khoản thu -->
+                    <MenuButton fx:id="feeButton" text="Khoản thu" prefWidth="150" prefHeight="60" styleClass="dbButtonModern">
+                        <graphic>
+                            <ImageView fitHeight="40" fitWidth="40">
+                                <image>
+                                    <Image url="@../image/MoneyIcon.png"/>
+                                </image>
+                            </ImageView>
+                        </graphic>
+                        <items>
+                            <MenuItem fx:id="serviceFeeButton" text="Phí dịch vụ" styleClass="dbItemFlat" onAction="#HandleClick"/>
+                            <MenuItem fx:id="managementFeeButton" text="Phí quản lý" styleClass="dbItemFlat" onAction="#HandleClick"/>
+                            <MenuItem fx:id="parkingFeeButton" text="Phí gửi xe" styleClass="dbItemFlat" onAction="#HandleClick"/>
+                            <MenuItem fx:id="livingFeeButton" text="Phí sinh hoạt" styleClass="dbItemFlat" onAction="#HandleClick"/>
+                            <MenuItem fx:id="voluntaryFeeButton" text="Phí đóng góp" styleClass="dbItemFlat" onAction="#HandleClick"/>
+                            <MenuItem fx:id="payButton" text="Thanh toán" styleClass="dbItemFlat" onAction="#HandleClick"/>
+                            <MenuItem fx:id="statisticButton" text="Thống kê" styleClass="dbItemFlat" onAction="#HandleClick"/>
+                        </items>
+                    </MenuButton>
+
+                </VBox>
+            </children>
+        </AnchorPane>
+    </left>
+
+    <!-- ================= Top Header ================= -->
+    <top>
+        <AnchorPane prefHeight="60.0" style="-fx-background-color:#ffffff; -fx-border-color:#E6E6E6; -fx-border-width:0 0 1 0;">
+            <children>
+                <!-- Logo góc trên bên trái -->
+                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="5.0">
+                    <image>
+                        <Image url="@../image/logo.jpg"/>
+                    </image>
+                </ImageView>
+                <Label layoutX="70.0" layoutY="15.0" text="BLUEMOON" textFill="#1B3A57">
+                    <font>
+                        <Font name="Segoe UI Bold" size="18.0"/>
+                    </font>
+                </Label>
+
+                <!-- Menu Admin góc trên bên phải -->
+                <MenuButton fx:id="settingButton" text="Admin" layoutX="1220.0" prefWidth="200.0" styleClass="settingButtonModern">
+                    <graphic>
+                        <ImageView fitHeight="50" fitWidth="50">
+                            <image>
+                                <Image url="@../image/AvaIcon.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <items>
+                        <MenuItem fx:id="userInfoButton" text="Thông tin cá nhân" styleClass="settingItemModern" onAction="#UserInfoOnAction"/>
+                        <MenuItem fx:id="changePwButton" text="Thay đổi mật khẩu" styleClass="settingItemModern" onAction="#ChangePwOnAction"/>
+                        <MenuItem fx:id="logoutButton" text="Đăng xuất" styleClass="settingItemModern" onAction="#LogoutOnAction"/>
+                    </items>
+                </MenuButton>
+            </children>
+        </AnchorPane>
+    </top>
+
+    <!-- ================= Main Content ================= -->
+    <center>
+        <AnchorPane fx:id="mainContent" style="-fx-background-color:#f6faff;">
+            <children>
+                <HBox spacing="40" layoutX="50" layoutY="50">
+                    <!-- Ô Hộ khẩu -->
+                    <AnchorPane fx:id="hoKhauBox" styleClass="statBoxModern" prefWidth="250" prefHeight="150">
+                        <children>
+                            <Label text="Số hộ khẩu" styleClass="statLabelModern" layoutX="20" layoutY="20"/>
+                            <Label fx:id="numOfHoKhauLabel" text="120" styleClass="statNumberModern" layoutX="20" layoutY="60"/>
+                            <ImageView fitHeight="50" fitWidth="50" layoutX="180" layoutY="50">
+                                <image>
+                                    <Image url="@../image/house.png"/>
+                                </image>
+                            </ImageView>
+                        </children>
+                    </AnchorPane>
+
+                    <!-- Ô Nhân khẩu -->
+                    <AnchorPane fx:id="nhanKhauBox" styleClass="statBoxModern" prefWidth="250" prefHeight="150">
+                        <children>
+                            <Label text="Số nhân khẩu" styleClass="statLabelModern" layoutX="20" layoutY="20"/>
+                            <Label fx:id="numOfNhanKhauLabel" text="300" styleClass="statNumberModern" layoutX="20" layoutY="60"/>
+                            <ImageView fitHeight="50" fitWidth="50" layoutX="180" layoutY="50">
+                                <image>
+                                    <Image url="@../image/group.png"/>
+                                </image>
+                            </ImageView>
+                        </children>
+                    </AnchorPane>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </center>
+
+</BorderPane>

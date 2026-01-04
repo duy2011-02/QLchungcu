@@ -1,0 +1,102 @@
+/* ================= ROOT ================= */
+.root {
+    -fx-background-color: #f6faff;
+}
+
+/* ================= BACKGROUND PANES ================= */
+.background {
+    -fx-background-color: white;
+    -fx-border-color: #E6E6E6;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+/* ================= TABLE ================= */
+.table {
+    -fx-background-color: white;
+    -fx-border-color: #000000;
+    -fx-border-width: 0.5px;
+}
+
+.table .column-header {
+    -fx-background-color: #5882FA;
+    -fx-text-fill: white;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 0.5px;
+    -fx-font-size: 12pt;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI";
+}
+
+.table .table-cell {
+    -fx-border-width: 0.5px; 
+    -fx-border-color: #cccccc;
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI";
+}
+
+/* ================= FORM ================= */
+.form {
+    -fx-background-color: #E0E6F8;
+    -fx-background-radius: 5px;
+    -fx-padding: 10;
+}
+
+/* ================= BUTTONS ================= */
+.button, .addBtn, #loginButton, .menuButton, .dbButton, .settingItem, .dbItem {
+    -fx-font-family: "Segoe UI";
+    -fx-font-weight: bold;
+    -fx-font-size: 11pt;
+    -fx-text-fill: white;
+    -fx-background-radius: 30px;
+    -fx-border-radius: 30px;
+    -fx-padding: 8 16;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-background-color: #5DADE2; /* xanh dương nhạt */
+}
+
+/* Hover effects for buttons */
+.button:hover, .addBtn:hover, #loginButton:hover, .menuButton:hover, .dbButton:hover, .dbItem:hover {
+    -fx-background-color: #3498DB; /* xanh đậm hơn khi hover */
+    -fx-text-fill: white;
+}
+
+/* Pressed effect */
+.button:pressed, .addBtn:pressed, #loginButton:pressed {
+    -fx-background-color: #2E86C1; /* xanh đậm khi nhấn */
+}
+
+/* ================= COMBOBOX / FIELDS ================= */
+.field, .comboBox {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 11pt;
+    -fx-text-fill: #333333;
+}
+
+/* ================= SIDEBAR / MENU ================= */
+#sidebarPane {
+    -fx-background-color: #222222;
+}
+
+.menuButton, .dbButton {
+    -fx-background-color: transparent;
+}
+
+.settingItem, .dbItem {
+    -fx-background-color: #5DADE2; /* xanh dương nhạt */
+    -fx-pref-width: 245px;
+    -fx-pref-height: 60px;
+    -fx-text-fill: white;
+}
+
+/* Context menus */
+.context-menu {
+    -fx-background-color: white;
+}
+
+/* ================= ADDITIONAL ================= */
+.settingItem:hover, .dbItem:hover {
+    -fx-background-color: #3498DB; /* hover xanh đậm */
+    -fx-text-fill: white;
+}

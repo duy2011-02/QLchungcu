@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.ThongKeController"
+            style="-fx-background-color: #f4f7f9;" prefWidth="1200" prefHeight="800">
+
+    <!-- Header -->
+    <AnchorPane style="-fx-background-color: white; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);"
+                AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" prefHeight="100">
+        <Label text="Thống kê" alignment="CENTER" textAlignment="CENTER"
+               AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+               AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+            <font>
+                <Font name="Segoe UI Bold" size="36"/>
+            </font>
+        </Label>
+    </AnchorPane>
+
+    <!-- Main content -->
+    <AnchorPane style="-fx-background-color: white; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 5);"
+                AnchorPane.topAnchor="120" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
+        <HBox spacing="30" AnchorPane.topAnchor="30" AnchorPane.leftAnchor="30" AnchorPane.rightAnchor="30" AnchorPane.bottomAnchor="30">
+
+            <!-- Hộ khẩu -->
+            <AnchorPane style="-fx-background-color: #E0E6F8; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 3);"
+                        HBox.hgrow="ALWAYS" prefHeight="300">
+                <Label text="Số hộ khẩu trong chung cư hiện tại:" alignment="CENTER" textAlignment="CENTER"
+                       AnchorPane.topAnchor="20" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+                    <font>
+                        <Font name="Segoe UI" size="24"/>
+                    </font>
+                </Label>
+
+                <Label fx:id="numOfHoKhauLabel" text="120" alignment="CENTER" textAlignment="CENTER"
+                       AnchorPane.topAnchor="100" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+                    <font>
+                        <Font name="Segoe UI Bold" size="60"/>
+                    </font>
+                </Label>
+
+                <ImageView fitWidth="150" fitHeight="150" preserveRatio="true"
+                           AnchorPane.bottomAnchor="20" AnchorPane.rightAnchor="20">
+                    <image>
+                        <Image url="@../image/house.png"/>
+                    </image>
+                </ImageView>
+            </AnchorPane>
+
+            <!-- Nhân khẩu -->
+            <AnchorPane style="-fx-background-color: #5882FA; -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 3);"
+                        HBox.hgrow="ALWAYS" prefHeight="300">
+                <Label text="Số nhân khẩu trong chung cư hiện tại:" alignment="CENTER" textAlignment="CENTER"
+                       AnchorPane.topAnchor="20" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" textFill="white">
+                    <font>
+                        <Font name="Segoe UI" size="24"/>
+                    </font>
+                </Label>
+
+                <Label fx:id="numOfNhanKhauLabel" text="120" alignment="CENTER" textAlignment="CENTER"
+                       AnchorPane.topAnchor="100" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" textFill="white">
+                    <font>
+                        <Font name="Segoe UI Bold" size="60"/>
+                    </font>
+                </Label>
+
+                <ImageView fitWidth="150" fitHeight="150" preserveRatio="true"
+                           AnchorPane.bottomAnchor="20" AnchorPane.rightAnchor="20">
+                    <image>
+                        <Image url="@../image/group.png"/>
+                    </image>
+                </ImageView>
+            </AnchorPane>
+
+        </HBox>
+    </AnchorPane>
+</AnchorPane>
