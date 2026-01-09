@@ -130,7 +130,7 @@ public class PhiGuiXeController {
     public void initialize(){
         loadData(Year.now().getValue());
         initializeSearchbar();
-        yearCBox.getItems().addAll(2023, 2024, 2025);
+        yearCBox.getItems().addAll(2023, 2024, 2025, 2026, 2027);
         yearCBox.setValue(Year.now().getValue());
         
         List<String> maHoKhauList = new ArrayList<>();

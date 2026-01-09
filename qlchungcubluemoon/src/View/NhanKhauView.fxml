@@ -83,8 +83,8 @@
 
                 <!-- Action Buttons (Xóa / Xem DS) -->
                 <Button layoutX="1000.0" layoutY="280.0" prefHeight="35.0" prefWidth="200.0" text="Xóa nhân khẩu" onAction="#deleteNhanKhauOnAction"/>
-                <Button layoutX="1000.0" layoutY="330.0" prefHeight="35.0" prefWidth="200.0" text="Xem DSKB tạm trú" onAction="#xemTamTruOnAction"/>
-                <Button layoutX="1000.0" layoutY="380.0" prefHeight="35.0" prefWidth="200.0" text="Xem DSKB tạm vắng" onAction="#xemTamVangOnAction"/>
+                <Button layoutX="1000.0" layoutY="330.0" prefHeight="35.0" prefWidth="200.0" text="DS khai báo tạm trú" onAction="#xemTamTruOnAction"/>
+                <Button layoutX="1000.0" layoutY="380.0" prefHeight="35.0" prefWidth="200.0" text="DS khai báo tạm vắng" onAction="#xemTamVangOnAction"/>
 
                 <!-- Form Thêm Nhân Khẩu -->
                 <AnchorPane layoutX="50.0" layoutY="450.0" prefHeight="80.0" prefWidth="1150.0" styleClass="form">

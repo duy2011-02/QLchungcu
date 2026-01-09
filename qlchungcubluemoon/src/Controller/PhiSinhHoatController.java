@@ -105,6 +105,7 @@ public class PhiSinhHoatController {
     public void initialize(){
         initializeComboBox();
         loadFeeData(yearCBox.getValue());
+        yearCBox.getItems().addAll(2023, 2024, 2025, 2026, 2027);
         loadUpdateFeeData(monthCBox.getValue(), yearCBox.getValue());    
         initializeSearchbar();
     }
