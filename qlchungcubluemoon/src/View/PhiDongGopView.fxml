@@ -67,7 +67,7 @@
                         <Font name="Segoe UI" size="20.0" />
                      </font>
                   </TextField>
-                  <Label layoutX="35.0" layoutY="111.0" prefHeight="30.0" prefWidth="315.0" text="Nhập số tiền đóng góp gợi ý :">
+                  <Label layoutX="35.0" layoutY="111.0" prefHeight="30.0" prefWidth="315.0" text="Nhập số tiền đóng góp :">
                      <font>
                         <Font name="Segoe UI" size="24.0" />
                      </font>
@@ -96,7 +96,7 @@
                   <TableView fx:id="listFeeTableView" layoutX="10.0" layoutY="54.0" prefHeight="230.0" prefWidth="460.0" styleClass="table">
                      <columns>
                         <TableColumn fx:id="tenPhi1Col" prefWidth="200.0" text="Tên Phí" />
-                        <TableColumn fx:id="soTienGoiYCol" prefWidth="260.0" text="Số tiền đóng góp gợi ý" />
+                        <TableColumn fx:id="soTienGoiYCol" prefWidth="260.0" text="Số tiền đóng" />
                      </columns>
                   </TableView>
                   <Button alignment="CENTER" contentDisplay="CENTER" layoutX="140.0" layoutY="301.0" mnemonicParsing="false" onAction="#deleteFeeOnAction" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #3399ff; -fx-background-radius: 5px;" text="Xóa khoản phí" textAlignment="CENTER">
